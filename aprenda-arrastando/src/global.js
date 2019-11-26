@@ -15,8 +15,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: linear-gradient(90deg, rgba(127,127,130,1) 0%, rgba(239,243,244,1) 0%, rgba(3,3,9,1) 96%);
-    -webkit-font-smoothing: antialiased !important;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 8%, rgba(46,136,181,1) 100%);
   }
 
   body, input, button {
