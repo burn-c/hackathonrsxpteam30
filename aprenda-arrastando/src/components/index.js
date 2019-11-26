@@ -1,22 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import styled from 'styled-components';
 import Button from './atoms/button';
+import Container from './atoms/container';
+
+const H1 = styled.h1`
+color: #fff;
+`;
 
 function Index() {
   return (
-    <div>
-      <header>
+    <Container>
         <Link to="/page_html">
           <a>
-            Iniciar o aprendizado
+            <H1>Iniciar o aprendizado</H1>
           </a>
         </Link>
-        <Button>HTML</Button>
-        <Button>CSS</Button>
-        <Button>Javascript</Button>
-      </header>
-    </div>
+        <Button margin>HTML</Button>
+        <Button margin>CSS</Button>
+        <Button margin>Javascript</Button>
+    </Container>
   );
 }
 
