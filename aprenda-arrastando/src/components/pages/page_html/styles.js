@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledSection = styled.section`
 width: 90%;
-height: 70vh;
+height: 50vh;
 display: flex;
 border-color: #fff;
 border-style: solid;

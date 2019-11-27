@@ -5,10 +5,6 @@ import { toast } from 'react-toastify';
 import Container from '../../atoms/container';
 import { H1, P, Ol, Li } from '../../atoms/text';
 import { Row, StyledSection, StyledDiv, Label, Footer } from './styles';
-<<<<<<< HEAD
-import Rankhook from '../../ranking/rankingHTML';
-import styled from 'styled-components';
-=======
 import {
   Btn1,
   Btn2,
@@ -17,12 +13,7 @@ import {
   Btn5,
   Btn6
 } from '../page_css/styles_css';
->>>>>>> master
 
-const Row2 = styled.div`
-  display:flex;
-  flex-direction:row;
-`;
 class PageHtml extends Component {
   state = {
     isH1: null,
@@ -67,7 +58,6 @@ class PageHtml extends Component {
   render() {
     return (
       <Container>
-        <Row2>
         <StyledSection>
         <Row>
           <H1>Quais elementos estão presentes na caixa abaixo:</H1>
@@ -117,9 +107,6 @@ class PageHtml extends Component {
           </Label>
         </Row>
         </StyledSection>
-        <Rankhook/>
-        </Row2>
-      
       </Container>
     )
   }
