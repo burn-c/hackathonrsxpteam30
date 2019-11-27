@@ -1,5 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Reference, Exercise, Options } from './styles_css';
+import { 
+  Container, 
+  Reference, 
+  Exercise, 
+  Options, 
+  Btn1,
+  Btn2,
+  Btn3,
+  Btn4,
+  Btn5,
+  Btn6
+} from './styles_css';
 import {toast} from 'react-toastify';
 
 export default function PageCss() {
@@ -68,13 +79,13 @@ export default function PageCss() {
       <footer>Credenciamento às 08:00</footer>
     </Exercise>
     <Options>
-      <button className="teste" oi={style1} onClick={handleStyle1}>background-color</button>
-      <button onClick={handleStyle2}>color</button>
-      <button onClick={handleStyle3}>font-family</button>
-      <button onClick={handleStyle4}>align-text</button>
+      <Btn1 style1={style1} onClick={handleStyle1}>background-color</Btn1>
+      <Btn2 style2={style2} onClick={handleStyle2}>color</Btn2>
+      <Btn3 style3={style3} onClick={handleStyle3}>font-family</Btn3>
+      <Btn4 style4={style4} onClick={handleStyle4}>align-text</Btn4>
 
-      <button onClick={handleStyle5}>font-style</button>
-      <button onClick={handleStyle6}>text-transform</button>
+      <Btn5 style5={style5} onClick={handleStyle5}>font-style</Btn5>
+      <Btn6 style6={style6} onClick={handleStyle6}>text-transform</Btn6>
       
     </Options>
     </Container>
