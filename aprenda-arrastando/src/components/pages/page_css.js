@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Reference, Exercise, Options } from './styles_css';
 import {toast} from 'react-toastify';
+import RankCSS from '../ranking/rankingCSS';
 
 
 export default function PageCss() {
@@ -82,7 +83,7 @@ export default function PageCss() {
       
       <button onClick={handleCorrection}>Enviar</button>
     </Options>
-    
+    <RankCSS/>
     </Container>
     
   )

@@ -3,7 +3,13 @@ import React, { Component } from 'react'
 import Container from '../../atoms/container';
 import { H1, P, Ol, Li } from '../../atoms/text';
 import { Row, StyledSection, StyledDiv, Label, Footer } from './styles';
+import Rankhook from '../../ranking/rankingHTML';
+import styled from 'styled-components';
 
+const Row2 = styled.div`
+  display:flex;
+  flex-direction:row;
+`;
 class PageHtml extends Component {
   state = {}
   
@@ -14,6 +20,7 @@ class PageHtml extends Component {
   render() {
     return (
       <Container>
+        <Row2>
         <StyledSection>
         <Row>
           <H1>Quais elementos estão presentes na caixa abaixo:</H1>
@@ -49,6 +56,9 @@ class PageHtml extends Component {
             </Label>
           </Row>
         </StyledSection>
+        <Rankhook/>
+        </Row2>
+      
       </Container>
     )
   }
