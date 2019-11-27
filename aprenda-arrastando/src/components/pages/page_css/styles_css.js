@@ -1,4 +1,5 @@
-import styled, {css} from 'styled-components';
+import styled from 'styled-components';
+import Button from '../../atoms/button';
 
 export const Reference = styled.div`
   background-color: black;
@@ -27,11 +28,39 @@ export const Exercise = styled.div`
 `;
 
 export const Options = styled.div`
-  button.teste {
-    ${props => props.style1 && css`
-      color: green;
-    `}
+  button {
+    font-size: 14px;
   }
+`;
+
+export const Btn1 = styled(Button)`
+  background-color: ${props => (props.style1 ? "green" : "default")};
+  color: ${props => (props.style1 ? "white" : "default")};
+`;
+
+export const Btn2 = styled(Button)`
+  background-color: ${props => (props.style2 ? "green" : "default")};
+  color: ${props => (props.style2 ? "white" : "default")};
+`;
+
+export const Btn3 = styled(Button)`
+  background-color: ${props => (props.style3 ? "green" : "default")};
+  color: ${props => (props.style3 ? "white" : "default")};
+`;
+
+export const Btn4 = styled(Button)`
+  background-color: ${props => (props.style4 ? "green" : "default")};
+  color: ${props => (props.style4 ? "white" : "default")};
+`;
+
+export const Btn5 = styled(Button)`
+  background-color: ${props => (props.style5 ? "red" : "default")};
+  color: ${props => (props.style5 ? "white" : "default")};
+`;
+
+export const Btn6 = styled(Button)`
+  background-color: ${props => (props.style6 ? "red" : "default")};
+  color: ${props => (props.style6 ? "white" : "default")};
 `;
 
 export const StyledDiv = styled.div`
