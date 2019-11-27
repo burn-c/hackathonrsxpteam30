@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 export const Container = styled.div`
   
@@ -21,4 +21,9 @@ export const Exercise = styled.div`
 `;
 
 export const Options = styled.div`
+  button.teste {
+    ${props => props.style1 && css`
+      color: green;
+    `}
+  }
 `;
