@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Index from './components';
-import PageHtml from './components/pages/page_html'
-import PageCss from './components/pages/page_css'
-import PageJavascript from './components/pages/page_javascript'
+import PageHtml from './components/pages/page_html/index'
+import PageCss from './components/pages/page_css/index'
+import PageJavascript from './components/pages/page_javascript/index'
 import toastiError from './components/toastiError';
 
 export default function Routes() {
