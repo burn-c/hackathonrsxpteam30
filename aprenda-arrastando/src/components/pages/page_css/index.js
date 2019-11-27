@@ -62,6 +62,7 @@ export default function PageCss() {
   });
 
   return (
+    <>
     <Container>
        <Row2>
       <StyledSection>
@@ -105,8 +106,11 @@ export default function PageCss() {
       </Options>
     
       </StyledSection>
-      <RankCSS/>
+   
       </Row2>
+ 
     </Container>
+     <RankCSS/>
+     </>
   )
 }
