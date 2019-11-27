@@ -1,21 +1,68 @@
 import React, { Component } from 'react'
+import { toast } from 'react-toastify';
+
 
 import Container from '../../atoms/container';
 import { H1, P, Ol, Li } from '../../atoms/text';
 import { Row, StyledSection, StyledDiv, Label, Footer } from './styles';
+<<<<<<< HEAD
 import Rankhook from '../../ranking/rankingHTML';
 import styled from 'styled-components';
+=======
+import {
+  Btn1,
+  Btn2,
+  Btn3,
+  Btn4,
+  Btn5,
+  Btn6
+} from '../page_css/styles_css';
+>>>>>>> master
 
 const Row2 = styled.div`
   display:flex;
   flex-direction:row;
 `;
 class PageHtml extends Component {
-  state = {}
-  
-  handleCheckH1 = () => {
-    console.log('cliquei')
+  state = {
+    isH1: null,
+    isP: false,
+    isImg: false,
+    isFooter: false,
+    isLi: false,
+    isUl: false,
   }
+  
+  handleCheckH1 = (e) => {
+    this.setState({ isH1: true });
+    toast.success("Parabéns, continue assim!");
+  }
+
+  handleCheckP = () => {
+    this.setState({ isP: true });
+    toast.success("Parabéns, continue assim!");
+  }
+
+  handleCheckImg = () => {
+    this.setState({ isImg: true })
+    toast.error("Ops, parece que não temos uma imagem...");
+  }
+
+  handleCheckFooter = () => {
+    this.setState({ isFooter: true });
+    toast.success("Parabéns, continue assim!");
+  }
+
+  handleCheckLi = () => {
+    this.setState({ isLi: true });
+    toast.success("Parabéns, continue assim!");
+  }
+
+  handleCheckUl = () => {
+    this.setState({ isUl: true });
+    toast.success("Parabéns, continue assim!");
+  }
+
 
   render() {
     return (
@@ -37,24 +84,38 @@ class PageHtml extends Component {
           </StyledDiv>
           <Row>
             <Label>
-              <input type="checkbox" onChange={() => null} />{(`<h1>`)}
+              <Btn1
+                onClick={this.handleCheckUl}
+              >{(`<ul>`)}
+              </Btn1>
             </Label>
+
             <Label>
-              <input type="checkbox" onChange={() => null} />{(`<p>`)}
+              <Btn2 type="checkbox" onClick={this.handleCheckP}>{(`<p>`)}
+              </Btn2>
             </Label>
+
             <Label>
-              <input type="checkbox" onChange={() => null} />{(`<ul>`)}
+              <Btn3 type="checkbox" onClick={this.handleCheckImg}>{(`<img>`)}
+              </Btn3>
             </Label>
+
             <Label>
-              <input type="checkbox" onChange={() => null} />{(`<li>`)}
+              <Btn4 type="checkbox" onClick={this.handleCheckFooter}>{(`<footer>`)}
+              </Btn4>
             </Label>
+
             <Label>
-              <input type="checkbox" onChange={() => null} />{(`<footer>`)}
+              <Btn5 type="checkbox" onClick={this.handleCheckLi}>{(`<li>`)}
+              </Btn5>
             </Label>
+
             <Label>
-              <input type="checkbox" onChange={() => null} />{(`<img>`)}
-            </Label>
-          </Row>
+              <Btn6 onClick={this.handleCheckH1}>
+              {(`<h1>`)}
+              </Btn6>
+          </Label>
+        </Row>
         </StyledSection>
         <Rankhook/>
         </Row2>
