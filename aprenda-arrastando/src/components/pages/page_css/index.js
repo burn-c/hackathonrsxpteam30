@@ -18,6 +18,13 @@ import {
 import {toast} from 'react-toastify';
 import Container from '../../atoms/container';
 import { H1, P, Ol, Li } from '../../atoms/text';
+import RankCSS from '../../ranking/rankingCSS';
+import styled from 'styled-components';
+
+const Row2 = styled.div`
+  display:flex;
+  flex-direction:row;
+`;
 
 export default function PageCss() {
   const [shadowStyle1, setStyle1] = useState(false);
@@ -56,8 +63,11 @@ export default function PageCss() {
   });
 
   return (
+    <>
     <Container>
+       <Row2>
       <StyledSection>
+
       <Row>
         <StyledDiv margin padding shadow borderRadius width height>
           <H1>RSXP</H1>
@@ -93,8 +103,14 @@ export default function PageCss() {
         <Btn5 style5={style5} onClick={handleStyle5}>font-style</Btn5>
         <Btn6 style6={style6} onClick={handleStyle6}>text-transform</Btn6>
       </Options>
+    
       </StyledSection>
+   
+      </Row2>
+ 
     </Container>
+     <RankCSS/>
+     </>
   )
 }
 
