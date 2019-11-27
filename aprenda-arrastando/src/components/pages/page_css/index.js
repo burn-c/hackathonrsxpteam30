@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Reference, Exercise, Options, StyledDiv, StyledSection } from './styles_css';
-import Container from '../../atoms/container';
+import React, { useState, useEffect } from 'react';
+import { Container, Reference, Exercise, Options } from './styles_css';
+import {toast} from 'react-toastify';
 
 export default function PageCss() {
   const [style1, setStyle1] = useState(false);
@@ -25,73 +25,58 @@ export default function PageCss() {
   }
   function handleStyle5() {
     setStyle5(!style5);
+    if (!style5) toast.error("Ops, algo de errado não está certo...");
   }
   function handleStyle6() {
     setStyle6(!style6);
+    if (!style6) toast.error("Ops, algo de errado não está certo...");
   }
 
-  function handleCorrection() {
-    if (style1 && style2 && style3 && style4){
-      alert("Acertou");
-    }
-    else {
-      alert("Errou");
-    }
-  }
+  useEffect(() => {
+    if (style1 && style2 && style3 && style4 && !style5 && !style6){
+      toast.success("Parabéns, pode ir para o próximo nível!");
+    };
+  });
 
   return (
     <Container>
-      <StyledSection>
-        {/* <Reference>
-          <h1>RSXP</h1>
-          <p>Viva uma experiência única!</p>
-          <ul>
-              <li>foco no aprendizado</li>
-              <li>foco na prática</li>
-              <li>foco no resultado</li>
-          </ul>
-          <footer>Credenciamento às 08:00</footer>
-        </Reference> */}
-        <StyledDiv black>
-          <StyledDiv margin padding shadow borderRadius>
-            <h1>RSXP</h1>
-            <p>Viva uma experiência única!</p>
-            <ul>
-              <li>foco no aprendizado</li>
-              <li>foco na prática</li>
-              <li>foco no resultado</li>
-            </ul>
-            <footer>Credenciamento às 08:00</footer>
-          </StyledDiv>
-        </StyledDiv>
-        <Exercise 
-          style1={style1} 
-          style2={style2}
-          style3={style3}
-          style4={style4}
-          style5={style5}
-          style6={style6}>
-          <h1>RSXP</h1>
-          <p>Viva uma experiência única!</p>
-          <ul>
-              <li>foco no aprendizado</li>
-              <li>foco na prática</li>
-              <li>foco no resultado</li>
-          </ul>
-          <footer>Credenciamento às 08:00</footer>
-        </Exercise>
-        <Options>
-          <button onClick={handleStyle1}>background-color</button>
-          <button onClick={handleStyle2}>color</button>
-          <button onClick={handleStyle3}>font-family</button>
-          <button onClick={handleStyle4}>align-text</button>
+      <Reference>
+      <h1>RSXP</h1>
+      <p>Viva uma experiência única!</p>
+      <ul>
+          <li>foco no aprendizado</li>
+          <li>foco na prática</li>
+          <li>foco no resultado</li>
+      </ul>
+      <footer>Credenciamento às 08:00</footer>
+    </Reference>
 
-          <button onClick={handleStyle5}>font-style</button>
-          <button onClick={handleStyle6}>text-transform</button>
-          
-          <button onClick={handleCorrection}>Enviar</button>
-        </Options>
-      </StyledSection>
+    <Exercise 
+      style1={style1} 
+      style2={style2}
+      style3={style3}
+      style4={style4}
+      style5={style5}
+      style6={style6}>
+      <h1>RSXP</h1>
+      <p>Viva uma experiência única!</p>
+      <ul>
+          <li>foco no aprendizado</li>
+          <li>foco na prática</li>
+          <li>foco no resultado</li>
+      </ul>
+      <footer>Credenciamento às 08:00</footer>
+    </Exercise>
+    <Options>
+      <button className="teste" oi={style1} onClick={handleStyle1}>background-color</button>
+      <button onClick={handleStyle2}>color</button>
+      <button onClick={handleStyle3}>font-family</button>
+      <button onClick={handleStyle4}>align-text</button>
+
+      <button onClick={handleStyle5}>font-style</button>
+      <button onClick={handleStyle6}>text-transform</button>
+      
+    </Options>
     </Container>
     
   )
