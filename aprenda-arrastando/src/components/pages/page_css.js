@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Reference, Exercise, Options } from './styles_css';
+import {toast} from 'react-toastify';
 
 export default function PageCss() {
   const [style1, setStyle1] = useState(false);
@@ -24,19 +25,18 @@ export default function PageCss() {
   }
   function handleStyle5() {
     setStyle5(!style5);
+    if (!style5) toast.error("Ops, algo de errado não está certo...");
   }
   function handleStyle6() {
     setStyle6(!style6);
+    if (!style6) toast.error("Ops, algo de errado não está certo...");
   }
 
-  function handleCorrection() {
-    if (style1 && style2 && style3 && style4){
-      alert("Acertou");
-    }
-    else {
-      alert("Errou");
-    }
-  }
+  useEffect(() => {
+    if (style1 && style2 && style3 && style4 && !style5 && !style6){
+      toast.success("Parabéns, pode ir para o próximo nível!");
+    };
+  });
 
   return (
     <Container>
@@ -68,7 +68,7 @@ export default function PageCss() {
       <footer>Credenciamento às 08:00</footer>
     </Exercise>
     <Options>
-      <button onClick={handleStyle1}>background-color</button>
+      <button className="teste" oi={style1} onClick={handleStyle1}>background-color</button>
       <button onClick={handleStyle2}>color</button>
       <button onClick={handleStyle3}>font-family</button>
       <button onClick={handleStyle4}>align-text</button>
@@ -76,7 +76,6 @@ export default function PageCss() {
       <button onClick={handleStyle5}>font-style</button>
       <button onClick={handleStyle6}>text-transform</button>
       
-      <button onClick={handleCorrection}>Enviar</button>
     </Options>
     </Container>
     
