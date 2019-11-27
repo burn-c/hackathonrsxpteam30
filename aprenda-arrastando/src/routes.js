@@ -15,6 +15,7 @@ export default function Routes() {
         <Route path="/page_css" component={PageCss} />
         <Route path="/page_javascript" component={PageJavascript} />
         <Route path="/toasti" component={toastiError} />
+       
       </Switch>
     </BrowserRouter>
   );

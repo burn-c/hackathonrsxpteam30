@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Reference, Exercise, Options } from './styles_css';
+import {toast} from 'react-toastify';
+
 
 export default function PageCss() {
   const [style1, setStyle1] = useState(false);
@@ -31,7 +33,9 @@ export default function PageCss() {
 
   function handleCorrection() {
     if (style1 && style2 && style3 && style4){
-      alert("Acertou");
+     // alert("Acertou");
+      toast('PARABÉNS - Vá para o Próximo nível');
+
     }
     else {
       alert("Errou");
@@ -78,6 +82,7 @@ export default function PageCss() {
       
       <button onClick={handleCorrection}>Enviar</button>
     </Options>
+    
     </Container>
     
   )
