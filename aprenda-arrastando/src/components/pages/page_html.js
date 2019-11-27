@@ -23,7 +23,16 @@ export default function PageHtml() {
   return (
     <Container>
       <StyledSection>
-        <StyledDiv>Imagem</StyledDiv>
+        <StyledDiv>
+        <h1>RSXP</h1>
+        <p>Viva uma experiência única!</p>
+        <ul>
+        <li>foco no aprendizado</li>
+        <li>foco na prática</li>
+        <li>foco no resultado</li>
+    </ul>
+    <footer>Credenciamento às 08:00</footer>
+        </StyledDiv>
         <StyledDiv>Exercício</StyledDiv>
       </StyledSection>
     </Container>
